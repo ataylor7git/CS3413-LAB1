@@ -3,6 +3,7 @@ CFLAGS=-Wall -I.
 DEPS=hellomake.h
 OBJS=hellomake.o hellofunc.o
 EXE=hellomake
+DFLAGS=-g
 
 hellomake: $(OBJS)
 	$(CC) -o $(EXE) $(OBJS) $(CFLAGS)
@@ -15,3 +16,10 @@ hellofunc.o:hellofunc.c $(DEPS)
 
 run:
 	./$(EXE)
+
+debug: $(DEPS)
+	$(CC) $(DFLAGS) -o hellomake hellomake.c hellofunc.c $(CFLAGS)
+
+clean:
+	rm -f $(OBJS)
+	rm -f $(EXE)
