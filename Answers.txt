@@ -1,0 +1,4 @@
+1. The command defined as trymake is ran in the terminal. An executable is outputted to the directory with the name "hellomake".
+2a. *I reckon the problem is that it is looking for the *.o files. Investigate. Perhaps not the problem. Will have to ssh into the lab computer to figure out whats going on.
+2b. Full command is ran in termina with the CC and CFLAGS variables defined. An exectuable is outputted to the directory with the name "hellomake". There are *.o files present as well, named hellofunc.o and hellomake.o.
+3. The output is still "Hello makefiles! 42"
